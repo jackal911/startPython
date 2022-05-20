@@ -15,3 +15,6 @@
   * JumpToPython
     * 위키독스 '점프 투 파이썬' 강의 노트 - https://wikidocs.net/13
     * 나도코딩 강의 내용 복습 겸 바탕을 좀 더 다지기 위해 수강
+  * PyTorch
+    * 위키독스 'PyTorch로 시작하는 딥 러닝 입문' 강의 노트 - https://wikidocs.net/52460
+    
