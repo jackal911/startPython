@@ -1,21 +1,33 @@
 # 평범한 배낭 https://www.acmicpc.net/problem/12865
 # 일단 input()으로 최대한 시간복잡도를 줄여보고 안되면 stdin을 써볼 예정
-N, K = map(int, input().split())
-things = [[0, 0]]
-for _ in range(N):
-    W, V = map(int, input().split())
-    things.append([W, V])
-knapsack = [[0 for _ in range(K+1)] for _ in range(N+1)]
+# N, K = map(int, input().split())
+# things = [[0, 0]]
+# for _ in range(N):
+#     W, V = map(int, input().split())
+#     things.append([W, V])
+# knapsack = [[0 for _ in range(K+1)] for _ in range(N+1)]
 
-for i in range(1, N+1):
-    for j in range(1, K+1):
-        weight = things[i][0]
-        value = things[i][1]
-        if j<weight:
-            knapsack[i][j] = knapsack[i-1][j]
-        else:
-            knapsack[i][j] = max(value + knapsack[i-1][j-weight], knapsack[i-1][j])
-print(knapsack[N][K])
+# for i in range(1, N+1):
+#     for j in range(1, K+1):
+#         weight = things[i][0]
+#         value = things[i][1]
+#         if j<weight:
+#             knapsack[i][j] = knapsack[i-1][j]
+#         else:
+#             knapsack[i][j] = max(value + knapsack[i-1][j-weight], knapsack[i-1][j])
+# print(knapsack[N][K])
+
+m,r=lambda:map(int,input().split()),range
+n,k=m()
+d=[0]*(k+1)
+print(d)
+for _ in r(n):
+    w,v=m()
+    for i in r(k,w-1,-1):d[i]=max(d[i],d[i-w]+v)
+    print(d)
+print(d)
+print(d[k])
+
 
 '''
 
@@ -28,6 +40,9 @@ for _ in r(n):
     w,v=m()
     for i in r(k,w-1,-1):d[i]=max(d[i],d[i-w]+v)
 print(d[k])
+
+# 냅색 알고리즘에서 어차피 바로 전 행과만 상호작용하는 걸 이용해서 덮어쓰기하며 1차원으로 구현한 것
+# 냅색을 충분히 공부해서 그나마 알아보지 아니면 외계어로 느껴졌을 듯
 
 '''
 
