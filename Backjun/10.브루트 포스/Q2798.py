@@ -1,7 +1,9 @@
 # 블랙잭 https://www.acmicpc.net/problem/2798
 import itertools as i
 N, M = map(int, input().split())
-cardSet = list(i.combinations(list(map(int, input().split())), 3))
+cardSet = list(i.combinations(map(int, input().split()), 3))
+print(cardSet)
+print(type(cardSet[0]))
 max = 0
 for card in cardSet:
     if sum(card)<=M and sum(card)>max:
