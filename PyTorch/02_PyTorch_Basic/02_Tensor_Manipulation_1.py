@@ -73,7 +73,7 @@ print(t.mean(dim=0))  # 행 제거
 print(t.mean(dim=1))  # 열 제거
 print(t.mean(dim=-1))  # 마지막 차원 제거. 여기선 열 제거
 
-# 덧셈(Sum)
+# 3) 덧셈(Sum)
 t = torch.FloatTensor([[1, 2], [3, 4]])
 print(t)
 print(t.sum())
@@ -81,5 +81,16 @@ print(t.sum(dim=0))
 print(t.sum(dim=1))
 print(t.sum(dim=-1))
 
-# 최대(Max)와 아그맥스(ArgMax)
-
+# 4) 최대(Max)와 아그맥스(ArgMax)
+print(t.max())  # tensor(4.)
+print(t.max(dim=0))  # torch.return_types.max(
+                     # values=tensor([3., 4.]),
+                     # indices=tensor([1, 1]))
+print('Max: ', t.max(dim=0)[0])  # Max:  tensor([3., 4.])
+print('Argmax: ', t.max(dim=0)[1])  # Argmax:  tensor([1, 1])
+print(t.max(dim=1))  # torch.return_types.max(
+                     # values=tensor([2., 4.]),
+                     # indices=tensor([1, 1]))                     
+print(t.max(dim=-1))  # torch.return_types.max(
+                      # values=tensor([2., 4.]),
+                      # indices=tensor([1, 1]))
