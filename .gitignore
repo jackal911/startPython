@@ -1,3 +1,4 @@
 hide_info.py
 *.pyc
 .idea
+laboratory.py
