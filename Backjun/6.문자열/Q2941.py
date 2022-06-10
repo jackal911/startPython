@@ -36,6 +36,7 @@ while i<len(string):
 print(count)
 
 '''시도1
+
 croas = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
 string = stringTemp = input()
 count = 0
