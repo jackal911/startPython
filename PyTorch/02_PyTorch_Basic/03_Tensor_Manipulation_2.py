@@ -1,3 +1,5 @@
+# 03_텐서 조작하기 2 https://wikidocs.net/52846
+
 import numpy as np
 import torch
 

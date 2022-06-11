@@ -1,3 +1,5 @@
+# 04_파이썬 클래스 https://wikidocs.net/60034
+
 # 1. 함수(function)과 클래스(Class)의 차이
 # 1) 함수(function)로 덧셈기 구현하기
 result = 0

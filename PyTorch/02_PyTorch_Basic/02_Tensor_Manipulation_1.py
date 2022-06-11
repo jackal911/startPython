@@ -1,3 +1,5 @@
+# 02_텐서 조작하기 1 https://wikidocs.net/52460
+
 import numpy as np
 import torch
 from torch import FloatTensor
