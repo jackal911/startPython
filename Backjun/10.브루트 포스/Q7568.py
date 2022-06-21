@@ -39,3 +39,12 @@ for person in people:
 print(result)
 
 '''
+
+'''
+
+# 숏코딩 https://www.acmicpc.net/source/28613583
+
+v=[[*map(int,input().split())]for _ in[0]*int(input())]
+for a,b in v:print(1+sum((a<c)*(b<d)for c,d in v))
+
+'''
